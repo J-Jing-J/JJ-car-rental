@@ -1,0 +1,24 @@
+.menu-bar .am-tar-bar {
+  position: relative;
+  overflow: visible !important;
+}
+.menu-bar .am-tabs {
+  width: 100%;
+  overflow: visible !important;
+}
+.menu-bar .am-tabs-pane.wrap {
+  overflow-y: visible !important;
+}
+.menu-bar .am-tab-bar-item {
+  height: auto !important;
+}
+.am-tabs-tab-bar-wrap {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+}
