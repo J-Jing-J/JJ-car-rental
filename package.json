@@ -3,41 +3,43 @@
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
-    "postinstall": "umi generate tmp",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
+    "test": "umi test",
+    "lint": "eslint --ext .js src mock tests",
+    "precommit": "lint-staged"
   },
   "dependencies": {
-    "@ant-design/pro-layout": "^6.5.0",
-    "dayjs": "^1.10.7",
-    "project-libs": "^1.1.5",
-    "react": "17.x",
+    "dayjs": "^1.8.29",
+    "project-libs": "^1.0.22",
+    "prop-types": "^15.7.2",
+    "rc-form": "^2.4.11",
+    "react": "^16.13.1",
     "react-awesome-swiper": "^1.4.16",
-    "react-dom": "17.x",
-    "react-icons": "^4.3.1",
-    "think-react-store": "^1.6.71",
-    "umi": "^3.5.20"
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "think-react-store": "^1.6.6"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@umijs/preset-react": "1.x",
-    "@umijs/test": "^3.5.20",
-    "lint-staged": "^10.0.7",
-    "prettier": "^2.2.0",
-    "typescript": "^4.1.2",
-    "yorkie": "^2.0.0"
+    "@umijs/preset-react": "^1.5.19",
+    "@umijs/test": "^3.2.10",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "react-test-renderer": "^16.7.0",
+    "umi": "^3.2.10"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }

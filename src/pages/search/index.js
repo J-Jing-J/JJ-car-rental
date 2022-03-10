@@ -112,7 +112,7 @@ export default function (props) {
       {!carsLists.length ? <ActivityIndicator toast /> :
         <div className='result'>
           {carsLists.map(item => (
-            <div className='item'>
+            <div className='item' key={item.id}>
               <img alt='img' className='item-img'
                 src={require('../../assets/blank.png')} data-src={item.img}
               />

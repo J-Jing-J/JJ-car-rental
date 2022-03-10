@@ -23,6 +23,10 @@
 .cars-page .info-msg {
   padding: 5px 0;
 }
+.cars-page .info-price {
+  color: red;
+  font-size: 17px;
+}
 .cars-page .comment-title {
   font-size: 20px;
   line-height: 20px;
@@ -85,4 +89,13 @@
 }
 .modal-comment .comment-btn {
   margin-top: 15px;
+}
+.info-item::after {
+  content: "";
+  margin-left: 3px;
+  padding-left: 3px;
+  border-left: 1px solid #ccc;
+  height: 8px;
+  display: inline-block;
+  vertical-align: middle;
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { history } from 'umi'
 
 export default function (props) {
   // const [cars, setCars] = useState([
@@ -40,6 +41,15 @@ export default function (props) {
   //   }
   // ])
 
+  const handleHotItemClick = (id) => {
+    history.push({
+      pathname: '/cars',
+      query: {
+        id
+      }
+    })
+  }
+
   useEffect(() => {
 
   }, [])
@@ -50,7 +60,7 @@ export default function (props) {
       <div className='hot-lists'>
         {
           props?.cars?.map(item => (
-            <div className='hot-lists-item' key={item.id}>
+            <div className='hot-lists-item' key={item.id} onClick={() => { handleHotItemClick(item.id) }}>
               <img className='img' alt='img' src={item.img} />
               <div className='title'>
                 <span className='brand'>{item.brand} </span>

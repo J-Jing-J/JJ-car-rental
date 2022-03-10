@@ -1,4 +1,4 @@
-import * as cars from './cars'
+import cars from './cars'
 
 
 export {

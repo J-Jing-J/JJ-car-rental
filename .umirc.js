@@ -40,7 +40,6 @@ export default defineConfig({
           title: '车辆详情'
         }
       ]
-    },
+    }
   ],
-  fastRefresh: {},
 });
